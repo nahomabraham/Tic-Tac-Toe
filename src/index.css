@@ -1,5 +1,6 @@
 body{
     background-color: #e4e4e5;
+    padding-top: 50px;
 }
 
 main {
@@ -10,4 +11,29 @@ main {
     border: 10px solid;
     border-radius: 30px;
     box-shadow: -10px 10px 0px black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-content: center;
+    gap: 7px;
+}
+
+.square,
+.square-x,
+.square-o {
+    width: 115px;
+    height: 115px;
+    background-color: #C9F9FC;
+    background-size: contain;
+    border: 5px solid;
+    border-radius: 10px;
+    box-shadow: -3px 3px 0px black;
+    cursor: pointer;
+}
+
+.square-x {
+    background-image: url("../assets/x_img.png");
+}
+.square-o {
+    background-image: url("../assets/o_img.png");
 }
