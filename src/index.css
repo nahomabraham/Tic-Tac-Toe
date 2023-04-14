@@ -1,0 +1,13 @@
+body{
+    background-color: #e4e4e5;
+}
+
+main {
+    background-color: white;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border: 10px solid;
+    border-radius: 30px;
+    box-shadow: -10px 10px 0px black;
+}
