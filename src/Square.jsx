@@ -8,9 +8,9 @@ export default function Square(props){
         className = "square-x"
     else
         className = "square"
-    let update = props.square.clickedBy === undefined
+    let shouldUpdate = props.square.clickedBy === undefined
     return (
-        <div className={className} onClick = {update ? props.updateSquare : undefined}>
+        <div className={className} onClick = {shouldUpdate ? props.updateSquare : undefined}>
             
         </div>
     )

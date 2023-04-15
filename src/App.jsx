@@ -1,19 +1,11 @@
 import React from "react";
 import Square from "./Square"
+import initState from "../Model/initState.json"
 
 export default function App(){
-    let squaresState = []
-    React.useEffect(() => {
-        
-    },[])
-    for (let i = 0; i < 9; i++) {
-        squaresState.push({
-            clickedBy: undefined,
-            id: `${i}`
-        })
-    }
     const [turn, setTurn] = React.useState("O")
-    const [squares, setSquares] = React.useState(squaresState)
+    const [squares, setSquares] = React.useState(initState)
+    
     React.useEffect(() => {
         analyze()
         switchTurn()
