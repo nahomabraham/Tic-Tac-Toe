@@ -20,7 +20,9 @@ main {
 
 .square,
 .square-x,
-.square-o {
+.square-o,
+.square-x-wins,
+.square-o-wins {
     width: 115px;
     height: 115px;
     background-color: #C9F9FC;
@@ -31,9 +33,16 @@ main {
     cursor: pointer;
 }
 
-.square-x {
+.square-x, 
+.square-x-wins {
     background-image: url("../assets/x_img.png");
 }
-.square-o {
+.square-o, 
+.square-o-wins {
     background-image: url("../assets/o_img.png");
+}
+
+.square-x-wins, 
+.square-o-wins {
+    background-color: lightgreen;
 }
