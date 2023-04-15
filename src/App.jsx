@@ -27,6 +27,7 @@ export default function App(){
             square={squares[i]}
             updateSquare={() => updateSquare(`${i}`)}
             gameOver={gameOver}
+            setGameOver={setGameOver}
             winner={winner}/>)
     }
 
@@ -37,10 +38,6 @@ export default function App(){
     }
 
     function updateSquare(id){
-        if (gameOver){
-            setGameOver(false)
-            return
-        }
         setSquares(prevSquares => prevSquares.map(prevSquare => {
             if( prevSquare.id === id && prevSquare.clickedBy === undefined) 
                 return {...prevSquare, clickedBy: turn}

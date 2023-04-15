@@ -12,9 +12,13 @@ export default function Square(props){
     else {
         className = "square"
     }
-    let shouldUpdate = props.square.clickedBy === undefined
+    let shouldUpdate = !props.gameOver && props.square.clickedBy === undefined
+
+    function restartGame(){
+        props.setGameOver(false)
+    }
     return (
-        <div className={className} onClick = {shouldUpdate ? props.updateSquare : undefined}>
+        <div className={className} onClick = {shouldUpdate ? props.updateSquare : restartGame}>
             
         </div>
     )
